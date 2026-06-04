@@ -1,54 +1,276 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>HEMM</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <header>
-  <h1>HEMM</h1>
-  <nav>
-    <a href="#inicio">Início</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#contato">Contato</a>
-  </nav>
+
+<div class="logo-area">
+<img src="assets/logo.png" alt="HEMM">
+</div>
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+</nav>
+
 </header>
 
 <section class="hero" id="inicio">
-  <h2>Bonés Hemm</h2>
-  <p>Minimalismo e qualidade.</p>
+
+<div class="hero-content">
+
+<p class="small-title">
+HEMM COLLECTION
+</p>
+
+<h1>
+One Simple Touch.
+</h1>
+
+<p class="hero-text">
+Peças exclusivas desenvolvidas para quem valoriza autenticidade.
+</p>
+
+<a href="#colecao" class="btn">
+Ver Coleção
+</a>
+
+</div>
+
 </section>
 
-<section class="produtos">
-  <div class="produto"><img src="assets/bege.jpg"><h3>Boné Bege</h3><p>R$ 59,99</p></div>
-  <div class="produto"><img src="assets/azul.jpg"><h3>Boné Azul Marinho</h3><p>R$ 59,99</p></div>
-  <div class="produto"><img src="assets/verde.jpg"><h3>Boné Verde</h3><p>R$ 59,99</p></div>
-  <div class="produto"><img src="assets/preto.jpg"><h3>Boné Preto</h3><p>R$ 59,99</p></div>
-  <div class="produto"><img src="assets/cafe.jpg"><h3>Boné Café</h3><p>R$ 59,99</p></div>
+<section id="colecao" class="colecao">
+
+<h2>Coleção</h2>
+
+<div class="produtos">
+
+<div class="produto">
+
+<img src="assets/caramel-latte.jpg">
+
+<h3>Caramel Latte</h3>
+
+<p class="price">
+R$ 59,99
+</p>
+
+<span>
+Pré-venda exclusiva
+</span>
+
+<button onclick="comprar('Caramel Latte')">
+Comprar
+</button>
+
+</div>
+
+<div class="produto">
+
+<img src="assets/sinknocean.jpg">
+
+<h3>Sinknocean</h3>
+
+<p class="price">
+R$ 59,99
+</p>
+
+<span>
+Pré-venda exclusiva
+</span>
+
+<button onclick="comprar('Sinknocean')">
+Comprar
+</button>
+
+</div>
+
+<div class="produto">
+
+<img src="assets/hemm-verde.jpg">
+
+<h3>Hemm BR Verde</h3>
+
+<p class="price">
+R$ 59,99
+</p>
+
+<span>
+Pré-venda exclusiva
+</span>
+
+<button onclick="comprar('Hemm BR Verde')">
+Comprar
+</button>
+
+</div>
+
+<div class="produto">
+
+<img src="assets/hemm-preto.jpg">
+
+<h3>Hemm BR Preto</h3>
+
+<p class="price">
+R$ 59,99
+</p>
+
+<span>
+Pré-venda exclusiva
+</span>
+
+<button onclick="comprar('Hemm BR Preto')">
+Comprar
+</button>
+
+</div>
+
+<div class="produto">
+
+<img src="assets/hemm-cafe.jpg">
+
+<h3>Hemm BR Café</h3>
+
+<p class="price">
+R$ 59,99
+</p>
+
+<span>
+Pré-venda exclusiva
+</span>
+
+<button onclick="comprar('Hemm BR Café')">
+Comprar
+</button>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="compra">
-<h2>Comprar</h2>
-<form name="pedido" method="POST" data-netlify="true">
-<input type="hidden" name="form-name" value="pedido">
-<input type="text" name="nome" placeholder="Nome" required>
-<input type="email" name="email" placeholder="E-mail" required>
-<input type="text" name="produto" placeholder="Produto desejado" required>
-<button type="submit">Enviar Pedido</button>
+<section class="pedido">
+
+<h2>Finalize seu pedido</h2>
+
+<form
+name="pedido"
+method="POST"
+data-netlify="true">
+
+<input
+type="hidden"
+name="form-name"
+value="pedido">
+
+<input
+type="text"
+name="nome"
+placeholder="Nome completo"
+required>
+
+<input
+type="tel"
+name="whatsapp"
+placeholder="WhatsApp"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="E-mail"
+required>
+
+<input
+type="text"
+id="produto"
+name="produto"
+placeholder="Produto"
+required>
+
+<input
+type="number"
+name="quantidade"
+value="1"
+min="1">
+
+<button type="submit">
+Enviar Pedido
+</button>
+
 </form>
 
-<h3>Pagamento PIX</h3>
-<img class="pix" src="assets/pix.jpg">
-<p>Pix: thehemmcompany@gmail.com</p>
-
-<a class="whats" href="https://wa.me/5521983558260">Pagar no cartão via WhatsApp</a>
 </section>
 
-<footer id="contato">
-<p>@hemmcompany</p>
-<p>WhatsApp: (21) 98355-8260</p>
+<section class="pix">
+
+<h2>Pagamento PIX</h2>
+
+<img src="assets/pix.png">
+
+<p>
+PIX:
+<strong>
+thehemmcompany@gmail.com
+</strong>
+</p>
+
+<a
+class="whatsapp"
+target="_blank"
+href="https://wa.me/5521983558260?text=Olá%20estou%20enviando%20meu%20comprovante">
+Enviar comprovante
+</a>
+
+</section>
+
+<section id="contato" class="contato">
+
+<h2>Contato</h2>
+
+<a
+target="_blank"
+href="https://instagram.com/hemmcompany">
+Instagram @hemmcompany
+</a>
+
+<a
+target="_blank"
+href="https://wa.me/5521983558260">
+WhatsApp
+</a>
+
+<a
+target="_blank"
+href="https://wa.me/5521983558260?text=Olá%20gostaria%20de%20receber%20um%20link%20de%20pagamento%20no%20cartão">
+Pagamento no cartão
+</a>
+
+</section>
+
+<footer>
+
+<p>
+© HEMM
+</p>
+
 </footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
