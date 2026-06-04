@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEMM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>HEMM</h1>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <h2>Bonés Hemm</h2>
+  <p>Minimalismo e qualidade.</p>
+</section>
+
+<section class="produtos">
+  <div class="produto"><img src="assets/bege.jpg"><h3>Boné Bege</h3><p>R$ 129,90</p></div>
+  <div class="produto"><img src="assets/azul.jpg"><h3>Boné Azul Marinho</h3><p>R$ 129,90</p></div>
+  <div class="produto"><img src="assets/verde.jpg"><h3>Boné Verde</h3><p>R$ 129,90</p></div>
+  <div class="produto"><img src="assets/preto.jpg"><h3>Boné Preto</h3><p>R$ 129,90</p></div>
+  <div class="produto"><img src="assets/cafe.jpg"><h3>Boné Café</h3><p>R$ 129,90</p></div>
+</section>
+
+<section class="compra">
+<h2>Comprar</h2>
+<form name="pedido" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="pedido">
+<input type="text" name="nome" placeholder="Nome" required>
+<input type="email" name="email" placeholder="E-mail" required>
+<input type="text" name="produto" placeholder="Produto desejado" required>
+<button type="submit">Enviar Pedido</button>
+</form>
+
+<h3>Pagamento PIX</h3>
+<img class="pix" src="assets/pix.jpg">
+<p>Pix: thehemmcompany@gmail.com</p>
+
+<a class="whats" href="https://wa.me/5521983558260">Pagar no cartão via WhatsApp</a>
+</section>
+
+<footer id="contato">
+<p>@hemmcompany</p>
+<p>WhatsApp: (21) 98355-8260</p>
+</footer>
+</body>
+</html>
