@@ -2,46 +2,38 @@
 <html lang="pt-BR">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>HEMM</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<header>
+<header class="header">
 
-<div class="logo-area">
-
+<div class="logo">
 <img src="assets/logo.png.png" alt="HEMM">
-
 </div>
 
 <nav>
-
 <a href="#inicio">Início</a>
 <a href="#colecao">Coleção</a>
-<a href="#sobre">Sobre</a>
 <a href="#contato">Contato</a>
-
 </nav>
 
 </header>
 
 <section class="hero" id="inicio">
 
-<div class="hero-content">
+<div class="hero-text">
 
-<p class="small-title">
+<p class="hero-mini">
 HEMM COLLECTION
 </p>
 
@@ -49,14 +41,18 @@ HEMM COLLECTION
 One Simple Touch.
 </h1>
 
-<p class="hero-text">
+<p>
 Peças exclusivas desenvolvidas para quem valoriza autenticidade, estilo e presença.
 </p>
 
-<a href="#colecao" class="btn">
+<a href="#colecao" class="hero-btn">
 Ver Coleção
 </a>
 
+</div>
+
+<div class="hero-image">
+<img src="assets/caramel-latte.jpg.png" alt="HEMM">
 </div>
 
 </section>
@@ -65,21 +61,15 @@ Ver Coleção
 
 <h2>Coleção</h2>
 
-<div class="produtos">
+<div class="grid">
 
-<div class="produto">
+<div class="card">
 
 <img src="assets/caramel-latte.jpg.png">
 
 <h3>Caramel Latte</h3>
 
-<p class="price">
-R$ 59,99
-</p>
-
-<span>
-Pré-venda exclusiva
-</span>
+<p class="price">R$ 59,99</p>
 
 <button onclick="comprar('Caramel Latte')">
 Comprar
@@ -87,19 +77,13 @@ Comprar
 
 </div>
 
-<div class="produto">
+<div class="card">
 
 <img src="assets/sinknocean.jpg.png">
 
 <h3>Sinknocean</h3>
 
-<p class="price">
-R$ 59,99
-</p>
-
-<span>
-Pré-venda exclusiva
-</span>
+<p class="price">R$ 59,99</p>
 
 <button onclick="comprar('Sinknocean')">
 Comprar
@@ -107,18 +91,13 @@ Comprar
 
 </div>
 
-<div class="produto">
+<div class="card">
 
 <img src="assets/hemm-verde.jpg.png">
+
 <h3>Hemm BR Verde</h3>
 
-<p class="price">
-R$ 59,99
-</p>
-
-<span>
-Pré-venda exclusiva
-</span>
+<p class="price">R$ 59,99</p>
 
 <button onclick="comprar('Hemm BR Verde')">
 Comprar
@@ -126,19 +105,13 @@ Comprar
 
 </div>
 
-<div class="produto">
+<div class="card">
 
 <img src="assets/hemm-preto.jpg.png">
 
 <h3>Hemm BR Preto</h3>
 
-<p class="price">
-R$ 59,99
-</p>
-
-<span>
-Pré-venda exclusiva
-</span>
+<p class="price">R$ 59,99</p>
 
 <button onclick="comprar('Hemm BR Preto')">
 Comprar
@@ -146,18 +119,13 @@ Comprar
 
 </div>
 
-<div class="produto">
+<div class="card">
 
 <img src="assets/hemm-cafe.jpg.jpeg">
+
 <h3>Hemm BR Café</h3>
 
-<p class="price">
-R$ 59,99
-</p>
-
-<span>
-Pré-venda exclusiva
-</span>
+<p class="price">R$ 59,99</p>
 
 <button onclick="comprar('Hemm BR Café')">
 Comprar
@@ -169,18 +137,6 @@ Comprar
 
 </section>
 
-<section id="sobre" class="sobre">
-
-<h2>Sobre a Hemm</h2>
-
-<p>
-A HEMM nasceu da busca por autenticidade, simplicidade e identidade.
-Cada peça é desenvolvida para representar estilo, qualidade e presença.
-Nossa proposta é oferecer produtos exclusivos para quem valoriza o essencial.
-</p>
-
-</section>
-
 <section class="pedido">
 
 <h2>Finalize seu Pedido</h2>
@@ -188,13 +144,9 @@ Nossa proposta é oferecer produtos exclusivos para quem valoriza o essencial.
 <form
 name="pedido"
 method="POST"
-data-netlify="true"
-netlify>
+data-netlify="true">
 
-<input
-type="hidden"
-name="form-name"
-value="pedido">
+<input type="hidden" name="form-name" value="pedido">
 
 <input
 type="text"
@@ -222,18 +174,6 @@ required>
 
 <input
 type="text"
-name="estado"
-placeholder="Estado"
-required>
-
-<input
-type="text"
-name="endereco"
-placeholder="Endereço completo"
-required>
-
-<input
-type="text"
 id="produto"
 name="produto"
 placeholder="Produto"
@@ -257,26 +197,33 @@ Enviar Pedido
 
 <h2>Pagamento PIX</h2>
 
+<div class="pix-card">
+
 <img src="assets/pix.png.jpeg">
 
 <p>
-
 PIX:
-
+<br>
 <strong>
 thehemmcompany@gmail.com
 </strong>
-
 </p>
 
 <a
-class="whatsapp"
+class="pix-btn"
 target="_blank"
-href="https://wa.me/5521983558260?text=Olá,%20estou%20enviando%20meu%20comprovante">
-
-Enviar Comprovante
-
+href="https://wa.me/5521983558260?text=Olá%20estou%20enviando%20meu%20comprovante">
+Enviar comprovante
 </a>
+
+<a
+class="card-btn"
+target="_blank"
+href="https://wa.me/5521983558260?text=Olá,%20gostaria%20de%20receber%20um%20link%20de%20pagamento%20no%20cartão.">
+Pagar no cartão
+</a>
+
+</div>
 
 </section>
 
@@ -284,28 +231,18 @@ Enviar Comprovante
 
 <h2>Contato</h2>
 
+<p>@hemmcompany</p>
+
 <a
 target="_blank"
 href="https://instagram.com/hemmcompany">
-
-Instagram @hemmcompany
-
+Instagram
 </a>
 
 <a
 target="_blank"
 href="https://wa.me/5521983558260">
-
 WhatsApp
-
-</a>
-
-<a
-target="_blank"
-href="https://wa.me/5521983558260?text=Olá,%20gostaria%20de%20receber%20um%20link%20para%20pagamento%20no%20cartão">
-
-Pagamento no Cartão
-
 </a>
 
 </section>
@@ -313,7 +250,7 @@ Pagamento no Cartão
 <footer>
 
 <p>
-© HEMM COMPANY
+© HEMM
 </p>
 
 </footer>
@@ -321,5 +258,4 @@ Pagamento no Cartão
 <script src="script.js"></script>
 
 </body>
-
 </html>
